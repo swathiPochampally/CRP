@@ -1,0 +1,26 @@
+<div ng-controller="loginController">
+    <div class="login-header">
+        <div class="page_text">Welcome to MoneyGram Compliance Reporting Portal</div>
+        <div class="page_text">Please Enter Your UserID and Password</div>
+    </div>
+    <div class="col-xs-7 col-sm-5 col-md-4 form-group">
+        <div>
+            <input class="form-control"  id="UserID" type="text" ng-model="vm.userId" placeholder="UserID">
+        </div>
+        <div class="align_boxing">
+            <input class="form-control"  id="password" type="password" ng-model="vm.password" placeholder="Password">
+        </div>
+    </div>
+    <div class="submit_align">
+        <input type="submit" class="btn btn-submit btn-primary" value="Sign In" ng-click="loginSubmit()"/>
+       <!-- <label>{{errorMessage}}</label>-->
+        <!-- <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert> -->
+    </div>
+    <div>
+            {{logginMessage}}
+    </div>
+    <div class="alert-msg-medium">
+        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+
+</div>

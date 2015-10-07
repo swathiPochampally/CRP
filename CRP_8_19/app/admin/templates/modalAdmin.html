@@ -1,0 +1,18 @@
+<h1>Users</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>UserID</th>
+        <th>Name</th>
+        <th>HQ#</th>
+        <th>HQ Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in items">
+        <td><a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+        </td>
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </tr>
+</table>

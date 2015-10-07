@@ -1,0 +1,12 @@
+<div>
+       <span dropdown on-toggle="toggled(open)">
+              <button id="single-button" type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled">
+                  {{label.name}} <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                  <li ng-repeat="choice in itemData">
+                      <a href ng-click="selectedChoice(choice)">{{choice.name}}</a>
+                  </li>
+              </ul>
+        </span>
+</div>

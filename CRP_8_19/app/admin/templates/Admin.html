@@ -1,0 +1,144 @@
+<div class="page_title">
+    Administration
+</div>
+<div class="admin_box">
+    <div>
+        <span class="align_searchtitle">
+            Search User
+        </span>
+        <span class="align_profileTitle ">
+            User Profile
+        </span>
+        <div class="align_columntitle_id">
+            Enter ID (or)Name
+        </div>
+        <div class="col-md-2 align_column_id">
+            <input class="form-control"  id="UserID" type="text" ng-model="vm.userId" placeholder="UserID/Name">
+        </div>
+        <div class="align_search">
+            <input type="submit" class="btn btn-submit btn-primary search_style" value="Search" ng-click="adminSearch();roleStatus()"/>
+        </div>
+    </div>
+    <div>
+
+        <div class="panel panel-default align_userProfilePanel1">
+            <div class="align_panelbox">
+                <label>Name:</label>
+                <input class="form-control col-xs-2 box_width" name="userName"  type="text" ng-model="userName" disabled>
+            </div>
+            <div class="align_panelbox">
+                <label>Address:</label>
+                <input class="form-control col-xs-2 box_width" name="address" type="text"  ng-model="userAddress"  disabled>
+            </div>
+            <div class="align_panelbox">
+                <label>e-mail ID:</label>
+                <input class="form-control col-xs-2 box_width" name="e-mail" type="text" ng-model="emailID"  disabled>
+            </div>
+        </div>
+        <div class="panel panel-default align_userProfilePanel2">
+            <div class="align_panelbox">
+                <label>UserID:</label>
+                <input class="form-control col-xs-2" name="userID"  type="text" ng-model="userID" disabled>
+            </div>
+            <div class="align_panelbox">
+                <label>Phone#:</label>
+                <input class="form-control col-xs-2" name="phoneNumber"  type="text"  ng-model="phoneNumber" disabled>
+            </div>
+            <div class="align_panelbox ">
+                <label>Company Name:</label>
+                <input class="form-control col-xs-2" name="companyName"  type="text" ng-model="companyName" disabled>
+            </div>
+        </div>
+        <div class="panel panel-default align_userProfilePanel3">
+            <div class="align_panelbox">
+                <label>Active/Inactive:</label>
+                <input class="form-control col-xs-2  box_width" name="active/Inactive"  type="text" ng-model="status" disabled>
+            </div>
+            <div class="align_panelbox">
+                <label>User Type:</label>
+                <input class="form-control col-xs-2  box_width" name="internalExternalUser"  type="text" ng-model="userType" disabled>
+            </div>
+            <div class="align_panelbox">
+                <label>Last Login:</label>
+                <input class="form-control col-xs-2  box_width" name="lastLogin"  type="text" ng-model="lastLoginTime" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="align_save">
+        <input type="submit" class="btn btn-submit btn-primary save_style" value="Save" ng-click="adminUpdate()"/>
+    </div>
+    <div class="align_Rolestitle">
+        User Type
+       <!-- <input class="form-control col-xs-2  box_width" type="text" ng-model="userType" ng-click="clearAll()" disabled/>-->
+        <span dropdown on-toggle="toggled(open)">
+            <button  type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled" ng-click="clearAll()">
+                {{selectedRole.name}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                <li ng-repeat="choice in rolesList">
+                    <a href ng-click="selectedRoleChoice(choice)">{{choice.name}}</a>
+                </li>
+            </ul>
+        </span>
+        <div class="role_section">
+            <div  ng-model="roleTag" ng-show="roleTag">
+                Role
+            </div>
+            <div class="panel panel-default role_align" ng-model="internalUserList" ng-show="internalUserList">
+                <label><input type="checkbox" name="mgiAdmin" ng-model="internalRoleAdmin" aria-label="Toggle ngShow" ng-disabled="internalRoleCompUser" ng-checked="internalRoleCompUser" ng-click="admin();add1()">MGI Admin</label>
+                <label><input type="checkbox" name="mgiCompUser" ng-model="internalRoleCompUser"aria-label="Toggle ngShow" ng-click="compUser();add1()" ng-disabled="internalRoleAdmin" ng-checked="internalRoleAdmin">MGI Compliance User</label>
+
+            </div>
+            <div class="panel panel-default role_align" ng-model="externalUserList" ng-show="externalUserList" >
+                <label><input type="checkbox" name="partnerAdmin" ng-model="externalRoleAdmin" aria-label="Toggle ngShow" ng-click="admin();add1()">Partner Admin</label>
+                <label><input type="checkbox" name="partnerCompUser" ng-model="externalRoleCompUser" aria-label="Toggle ngShow"  ng-click="compUser();add1()">Partner Compliance User</label>
+
+            </div>
+        </div>
+    </div>
+    <div class="align_Location">
+        Location
+        <input type="text" ng-model="selectedUpdateLocation"  item-data="locationList"  typeahead="item as item.name for item in locationList | filter:$viewValue | limitTo:10" typeahead-no-results="noResults" class="form-control">
+        <button  class="btn btn-submit btn-primary add_style" value="+" ng-click="addLocation()">+</button>
+
+        <div class="panel panel-default locations_box" ng-model="collectLocation">
+            <!-- <input type="text" value="locationName" ng-model="selectedUpdateLocation"
+                    placeholder="list of selected locations...">-->
+            <div ng-repeat="selectedUpdateLocation in collectLocation track by $index">
+
+                <!--<span ng-click="deleteLocation($index)">-->
+                <div class="box_makeup">{{selectedUpdateLocation.name}} <button  class="btn btn-submit btn-primary del_style" ng-click="deleteLocation($index)">x</button></div>
+
+                <!-- </span>-->
+            </div>
+
+        </div>
+    </div>
+    <div class="permission_section">
+        <div  ng-show="permissionTitleEnable" class="permissions_title">
+            Permissions
+        </div>
+        <div class="panel panel-default permissions_box" ng-show="permissionEnable ">
+            <div ng-show="permissionEnable">
+                <label><input type="checkbox" ng-checked="getCheckedYes()"   ng-change="checkboxClick(chk.permission_grantview)" ng-model="chk.permission_grantview">Grant Unmasked View</label>
+                <label><input type="checkbox" ng-checked="getCheckedYes()"  ng-change="checkboxClick(chk.permission_grantprint)" ng-model="chk.permission_grantprint">Grant Unmasked Print/Export</label>
+                <label><input type="checkbox" ng-checked="getCheckedYes()"  ng-change="checkboxClick(chk.permission_grantview)" ng-model="chk.permission_unmaskview">Unmasked View</label>
+                <label><input type="checkbox" ng-checked="getCheckedYes()"  ng-change="checkboxClick(chk.permission_grantprint)" ng-model="chk.permission_unmaskprint">Unmasked Print/Export</label>
+            </div>
+        </div>
+    </div>
+    <div class="permission_section">
+       <!-- <div  ng-show="permissionTitleEnableComp" class="permissions_title">
+            Permissions
+        </div>-->
+        <div class="panel panel-default permissions_box" ng-show="somePermissionsEnable" >
+                <label><input type="checkbox" ng-checked="getCheckedYes()"  ng-change="checkboxClick(chk.permission_grantview)" ng-model="chk.permission_unmaskview">Unmasked View</label>
+                <label><input type="checkbox" ng-checked="getCheckedYes()"  ng-change="checkboxClick(chk.permission_grantprint)" ng-model="chk.permission_unmaskprint">Unmasked Print/Export</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert-msg-medium message_update">
+        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+</div>

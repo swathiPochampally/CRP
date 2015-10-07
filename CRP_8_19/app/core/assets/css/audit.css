@@ -1,0 +1,51 @@
+.logoutbtn{
+    margin-left:300px;
+
+}
+
+.audit_box{
+    width: 1166px;
+    height: 468px;
+    border: 2px solid #DFDDDB;
+    background-color: #DFDDDB;
+}
+.audit_sub_section{
+    position: relative;
+
+}
+.audit_item{
+    display: inline-block;
+    width: 20%;
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+}
+.audit_item_1{
+    width: 18%;
+    display: inline-block;
+    position: relative;
+    top: -32px;
+    margin: 0px 10px 0px 10px;
+}
+
+.exportbtn{
+    margin-left: 547px;
+    margin-top: -16px;
+}
+.error_startdate{
+    color: red;
+    display: inline-block;
+    margin-left: 510px;
+}
+.error_enddate{
+    color:red;
+    position: absolute;
+    display: inline-block;
+    margin-left: 737px;
+}
+.location_audit{
+    width: 274px;
+    height:33px;
+}
+.exportmsg{
+    margin-left: 24px;
+}

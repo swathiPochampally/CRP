@@ -1,0 +1,20 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Manage Columns</h3>
+    </div>
+    <div class="modal-body">
+        <ul>
+            <li ng-repeat="column in columns">
+                <input type="checkbox"  ng-click="columnClick(column)"  ng-model="column.checked" ng-if="column.displayName!=''">{{column.displayName}}
+                <!--<a href="#" ng-click="selected.item = item">{{ item }}</a>-->
+            </li>
+        </ul>
+        <div class="template-text">
+             Name of template <input class="form-control" type="text" ng-model="customTemplateName" ng-disabled="disableTemplate">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">SAVE</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

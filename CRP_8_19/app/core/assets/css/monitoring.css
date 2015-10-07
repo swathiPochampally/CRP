@@ -1,0 +1,197 @@
+.mon_box{
+    width: 1166px;
+    height: 500px;
+    border: 2px solid #DFDDDB ;
+    background-color:#DFDDDB ;
+}
+.mon_box2{
+    width: 1166px;
+    height: 300px;
+    border: 2px solid #DFDDDB ;
+    background-color:#DFDDDB ;
+    position: relative;
+}
+.mon_section{
+    /* margin-top:5px; */
+}
+.mon_item{
+    display: inline-block;
+    width: 20%;
+    padding: 0px 10px 0px 15px;
+    margin-top: 5px;
+}
+.mon_item_date{
+    width: 18%;
+    display: inline-block;
+    position: relative;
+    top: -25px;
+    margin: 0px 8px 0px 15px;
+}
+.mon_separator{
+    color: gray;
+    padding-left: 15px;
+    margin-top: -15px;
+}
+.mon_sub_section{
+    position: relative;
+    /* top:5px; */
+
+}
+.optional_icon{
+    background-image: url("../img/optional_icon.png");
+    float: right;
+    width: 25px;
+    height: 20px;
+    border-color: transparent;
+    cursor: pointer;
+
+}
+.Id_align {
+    display:inline;
+}
+.radio_bunch{
+    padding:4px;
+    border: 3px gray;
+    margin-left: 15px;
+    display: inline;
+    margin-top:70px;
+
+
+}
+.radio_bunch:last-child {
+    margin-left: 67px;
+}
+.radio_collection
+{
+    margin-top:18px;
+}
+.radio_buttonfont{
+    font-size: 12px;
+}
+.account_item{
+    margin-top:20px;
+}
+.viewstyle
+{
+
+    margin-top: 20px;
+
+
+    padding-left: 40px;
+
+
+    padding-right: 40px;
+    position: relative;
+    background-color: #009CDE;
+    border: transparent;
+    font-size: 20px;
+    font-family: Omnes Regular;
+
+
+    left: 42%;
+
+}
+.viewstyle:hover{
+    background-color:#009CDE;
+    opacity:0.8;
+}
+.viewstyle:active{
+    background-color:#009CDE;
+    opacity:1.2;
+}
+.optional_icon_toggle
+{   background-image: url("../img/optional_icon.png");
+    float: right;
+    width: 25px;
+    height: 20px;
+    border-color: transparent;
+    cursor: pointer;
+    -ms-transform: rotate(540deg);
+    -webkit-transform: rotate(540deg);
+    transform: rotate(540deg);
+
+}
+
+
+
+.mon-results-control-bar{
+    width: 1166px;
+    height: 48px;
+    background-color: #DFDDDB;
+    margin-top: 65px;}
+.mon-results{
+    width: 1166px;
+    height: 420px;
+    background-color: #DFDDDB;
+}
+.mon-grid {
+    width: 1165px;
+    height: 420px;
+}
+.mon-results-control-bar-text{
+    /* text-align: center; */
+    /* font-weight: bold; */
+    /* height: 0px; */
+}
+.mon-results-control-bar-search{
+    display: inline-block;
+    width: 20%;
+    padding: 0px 10px 5px 0px;
+    float: right;
+    height: 0;
+}
+
+.mon-pattern{
+    display: inline-block;
+    width: 215px;
+    position: relative;
+    padding: 7px 10px 0px 5px;
+}
+
+.mon-showhide{
+    width: 20%;
+    height: 0;
+    position: relative;
+    left: 450px;
+
+    /* display: none; */
+    padding-top: 5px;
+}
+
+.templatestyle{
+    /* float: right; */
+    position: relative;
+    /* width: 420px;
+     height: 25px;*/
+    margin-top: 0px;
+    height: 40px;
+    /* width: 45px; */
+    left: 0px;
+}
+.pattern-aggregate{
+    width: 100px;
+    display: inline-block;
+    height: 0;
+    position: relative;
+}
+.xls_buttonAlign{
+    /* border: 2px solid gray;*/
+    height: 0;
+    left: 810px;
+    position: relative;
+    width: 35px;
+}
+/*Show Columns Modal */
+.modal-body > ul{
+    list-style-type: none;
+}
+.template-text{
+    display: inline-block;
+    width: 275px;
+    padding: 0px 10px 0px 15px;
+    margin-top: 5px;
+}
+/*UI GRID CSS Override*/
+.ui-grid-column-menu-button{
+    display: none;
+}

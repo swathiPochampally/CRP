@@ -1,0 +1,156 @@
+
+.header_image{
+    left: 90px;
+    position: relative;
+    margin-top: 10px;
+    width: 0px;
+}
+.header_right{
+    font-size:14px;
+    margin-left:650px;
+
+
+
+}
+.header-border{
+    border-bottom: 2px solid #DA291C;;
+}
+.page_view{
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 95px;
+}
+.page_title{
+    font-size: 45px;
+    font-weight:700;
+}
+.nav_set{
+    position: absolute;
+    left: 275px;
+    top: 35px;
+    width: 500px;
+    font-family: 'Omnes Regular', 'Omnes'
+opacity:0.9;
+}
+.nav_item{
+    cursor: pointer;
+    padding: 0px 20px 0px;
+}
+.nav_item:hover{
+    font-weight: 600;
+    color: rgb(255,103,31);
+}
+.navbar-nav-margin-left-4pc{
+    margin-left: 20px;
+}
+.nav>li>a.main-menu-item{
+    padding: 10px 0;
+}
+.nav>li>a.main-menu-item:hover{
+    background-color: #FFF;
+}
+.main-menu-item-padding:hover{
+    background-color: #FFF;
+}
+.main-menu-item-padding{
+    padding: 0 60px;
+}
+
+.crp-navbar{
+    min-height: 40px;
+    background-color: #DFDDDB;
+    padding-left: 50px;
+}
+.margin-right-4pc {
+    margin-right: 4%;
+}
+.margin-top-32 {
+    display: block;
+    margin-top: 32px;
+}
+body{
+    color: #4D4540;
+    font-family: omnesregular,arial,sans-serif;
+    font-size: 16px;;
+    font-style: normal;
+    font-weight: normal;
+
+}
+header{
+    background: white;
+}
+.footer {
+    font-size: 12px;
+    border-top: 2px solid #da291c;
+    color: #999;
+    width: 100%;
+    height: 105px;
+}
+.footer-divider {
+    height: 5px;
+    width: 0;
+    border-left: 2px solid #DA291C;
+}
+/*UI-BootStrap Controls*/
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.crp-button{
+    background-color: white;
+    width:100%;
+}
+.crp-typahead{
+    padding-left: 0px;
+    width:225px;
+}
+.crp-dropdown{
+    width: 100%;
+}
+.alert-msg{
+    width: 1166px;
+    text-align: center;
+    margin-top: 10px;
+}
+.alert-msg-medium{
+    width: 33%;
+    padding-left:15px;
+}
+/* LOGIN RELATED */
+
+
+.lock_logout:hover{
+    text-decoration:underline;
+}
+.logout_style{
+    font-size: 14px;
+    font-family: omnesregular, arial, sans-serif;
+    position: relative;
+    line-height: 20px;
+    left: 88%;
+    width: 160px;
+    bottom: 50px;
+    height: 0;
+}
+.mg-link:hover{
+    text-decoration:underline;
+}
+.mg-link{
+    color:#009CDE;
+    font-size: 14px;
+    font-family: omnesregular, arial, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+.fa-unlock:before {
+    content: "\f09c";
+}
+.wel_header {
+    font-color: black;
+    font-family: Omnes regular;
+    font-size: 14px;
+    float: right;
+    margin-top: -56px;
+    margin-right: 239px;
+}
+
+/*end*/

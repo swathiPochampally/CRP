@@ -1,0 +1,769 @@
+/******** Global Variables *********/
+/******** End of Global Variables ********/
+/******** Mixin *********/
+/******** End of Mixin *********/
+/******** Generic & Element Styles **********/
+@font-face {
+    font-family: omnesregular;
+    src: url("/assets/fonts/Omnes-Regular.otf"); }
+@font-face {
+    font-family: omnesregularitalic;
+    src: url("/assets/fonts/Omnes-RegularItalic.otf"); }
+@font-face {
+    font-family: omnessemibold;
+    src: url("/assets/fonts/Omnes-Semibold.otf"); }
+@font-face {
+    font-family: omneslight;
+    src: url("/assets/fonts/Omnes-Light.otf"); }
+html, body {
+    height: 100%; }
+
+body {
+    color: #4D4540;
+    font-family: omnesregular, arial, sans-serif;
+    font-size: 16px; }
+
+strong {
+    font-family: omnessemibold, arial, sans-serif; }
+
+em {
+    font-family: omnesregularitalic, arial, sans-serif; }
+
+h1 {
+    font-family: omneslight;
+    font-size: 40px; }
+
+.clear {
+    clear: both; }
+
+.cursor-pointer {
+    cursor: pointer; }
+
+/******** End of Generic & Element Styles **********/
+/******* Customize Styles ********/
+.highlight:hover {
+    background-color: #DFDDDB; }
+
+.hover-underline:hover {
+    text-decoration: underline; }
+
+.border-top-red-5 {
+    border-top: 5px solid #DA291C; }
+
+.zero-radius {
+    border-radius: 0; }
+
+.line-height-pt75 {
+    line-height: .75; }
+
+.height-84pc {
+    height: 84%; }
+
+.height-38 {
+    height: 38px; }
+
+.width-100pc {
+    width: 100%; }
+
+.width-85pc {
+    width: 85%; }
+
+.width-80pc {
+    width: 80%; }
+
+.width-50pc {
+    width: 50%; }
+
+.width-44pc {
+    width: 44%; }
+
+.rounded-corners-5 {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+
+.rounded-corners-top-5 {
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    border-top-right-radius: 5px; }
+
+.rounded-corners-bottom-5 {
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px; }
+
+.header-border {
+    border-bottom: 2px solid #DA291C; }
+
+.main-bg {
+    background-color: #FFFFFF;
+    margin: 0 -14px;
+    padding: 2% 6%;
+    min-height: 100%;
+    margin-bottom: -189px; }
+
+.main-bg:after {
+    content: "";
+    display: block; }
+
+.footer, .main-bg:after {
+    height: 105px; }
+
+.footer {
+    font-size: 12px;
+    border-top: 2px solid #da291c;
+    color: #999;
+    width: 100%; }
+
+.footer-divider {
+    height: 5px;
+    width: 0;
+    border-left: 2px solid #DA291C; }
+
+.main-top-grey-bg {
+    background-color: #F7F5F3;
+    height: 80px;
+    border-bottom: 1px solid #DFDDDB; }
+
+.main-bottom-grey-bg {
+    background-color: #F7F5F3;
+    height: 80px;
+    border-top: 1px solid #DFDDDB; }
+
+.button-nav-bottom-grey-bg {
+    background-color: #F7F5F3;
+    height: 80px;
+    border-top: 1px solid #DFDDDB;
+    width: 153%;
+    margin-left: -12%;
+    margin-right: 0; }
+
+.dashboard-content-align {
+    width: 69%;
+    margin-left: 17%; }
+
+.margin-0 {
+    margin: 0; }
+
+.margin-top-2pc-bottom-neg-3pc {
+    margin-top: 2%;
+    margin-bottom: -3%;
+    margin-left: -1px; }
+
+.margin-top-3pc-bottom-0 {
+    margin-top: 3%;
+    margin-bottom: 0; }
+
+.margin-top-neg-15-bottom-15 {
+    margin-top: -15px;
+    margin-bottom: -15px; }
+
+.margin-top-neg-3 {
+    margin-top: -3px; }
+
+.margin-top-neg-6 {
+    margin-top: -6px; }
+
+.margin-top-neg-43 {
+    margin-top: -43px; }
+
+.margin-top-3 {
+    margin-top: 3px; }
+
+.margin-top-9 {
+    margin-top: 9px; }
+
+.margin-top-14 {
+    margin-top: 14px; }
+
+.margin-top-16 {
+    margin-top: 16px; }
+
+.margin-top-23 {
+    margin-top: 23px; }
+
+.margin-top-27 {
+    margin-top: 27px; }
+
+.margin-top-29 {
+    margin-top: 29px; }
+
+.margin-top-30 {
+    margin-top: 30px; }
+
+.margin-top-32 {
+    display: block;
+    margin-top: 32px; }
+
+.margin-top-88 {
+    display: block;
+    margin-top: 88px; }
+
+.margin-top-156 {
+    margin-top: 156px; }
+
+.margin-top-217 {
+    margin-top: 217px; }
+
+.margin-top-403 {
+    margin-top: 403px; }
+
+.margin-top-448 {
+    margin-top: 448px; }
+
+.margin-right-neg-5 {
+    margin-right: -5px; }
+
+.margin-right-5 {
+    margin-right: 5px; }
+
+.margin-right-10 {
+    margin-right: 10px; }
+
+.margin-right-50 {
+    margin-right: 50px; }
+
+.margin-right-4pc {
+    margin-right: 4%; }
+
+.margin-bottom-0 {
+    margin-bottom: 0; }
+
+.margin-bottom-10 {
+    margin-bottom: 10px; }
+
+.margin-bottom-16 {
+    margin-bottom: 16px; }
+
+.margin-bottom-50 {
+    margin-bottom: 50px; }
+
+.margin-bottom-100 {
+    margin-bottom: 100px; }
+
+.margin-left-0 {
+    margin-left: 0; }
+
+.margin-left-15 {
+    margin-left: 15px; }
+
+.margin-left-17 {
+    margin-left: 17px; }
+
+.margin-left-50 {
+    margin-left: 50px; }
+
+.margin-left-1-4pc {
+    margin-left: 1.4%; }
+
+.margin-left-1-8pc {
+    margin-left: 1.8%; }
+
+.margin-left-4pc {
+    margin-left: 4%; }
+
+.margin-left-neg-36 {
+    margin-left: -36px; }
+
+.margin-left-right-10pc {
+    margin-right: 10%;
+    margin-left: 10%; }
+
+.padding-0 {
+    padding: 0; }
+
+.padding-5 {
+    padding: 5px; }
+
+.padding-3pc {
+    padding-right: 3%;
+    padding-left: 3%; }
+
+.padding-top-8 {
+    padding-top: 8px; }
+
+.padding-top-22 {
+    padding-top: 22px; }
+
+.padding-top-24 {
+    padding-top: 24px; }
+
+.padding-right-15 {
+    padding-right: 15px; }
+
+.padding-left-18 {
+    padding-left: 18px; }
+
+.padding-left-40 {
+    padding-left: 40px; }
+
+.padding-left-50 {
+    padding-left: 50px; }
+
+.padding-left-2-2pc {
+    padding-left: 2.2%; }
+
+.padding-left-10pc {
+    padding-left: 10%; }
+
+.padding-top-bottom-10 {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.bottom-border {
+    border-bottom: 1px solid #80766E; }
+
+.bottom-border:last-child {
+    border-bottom: none; }
+
+.main-menu-item {
+    color: #4D4540; }
+
+.main-menu-item:hover {
+    color: #4D4540; }
+
+.main-menu-item-padding {
+    padding: 0 60px; }
+
+.main-menu-item-padding:hover {
+    background-color: #FFFFFF; }
+
+/*.main-menu-focus-border:hover:before {
+  background-color: #DA291C;
+  content: "";
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  height: 4px;
+  width: 67%;
+}*/
+/*.main-menu-divider {
+  padding-right: 30px;
+  display: inline-block;
+}*/
+/*.main-menu-divider-border {
+  border-right: 2px solid #80766E;
+}*/
+.popular-destination-bar-border {
+    border-bottom: 1px solid #009CDE;
+    border-right: 1px solid #009CDE; }
+
+.popular-destination-bar {
+    border: 1px solid #009CDE;
+    border-radius: 0;
+    color: #009CDE;
+    width: 25%;
+    border-bottom: none;
+    border-right: none;
+    text-shadow: none; }
+
+.popular-destination-bar:hover {
+    border: none;
+    border-bottom: 1px solid #009CDE;
+    background-color: #009CDE;
+    color: #FFFFFF; }
+
+.popular-destination-bar:focus {
+    border: none;
+    background-color: #009CDE;
+    color: #FFFFFF; }
+
+.z-index-neg-1 {
+    z-index: -1; }
+
+.z-index-100 {
+    z-index: 100; }
+
+/**** Customize Radio Button ****/
+/* Hiding default checkbox and Radio button design */
+input[type=radio] {
+    opacity: 0;
+    position: absolute;
+    z-index: 12;
+    width: 18px;
+    height: 18px; }
+
+/* Disable outline when clicked */
+input[type=radio]:checked, input[type=radio]:focus {
+    outline: none !important; }
+
+input[type=radio] + .lbl {
+    position: relative;
+    z-index: 11;
+    display: inline-block;
+    margin: 0;
+    line-height: 20px;
+    min-height: 14px;
+    min-width: 14px;
+    font-weight: normal; }
+
+input[type=radio] + .lbl.padding-16::before {
+    margin-right: 16px; }
+
+input[type=radio] + .lbl.padding-12::before {
+    margin-right: 12px; }
+
+input[type=radio] + .lbl.padding-8::before {
+    margin-right: 8px; }
+
+input[type=radio] + .lbl.padding-4::before {
+    margin-right: 4px; }
+
+input[type=radio] + .lbl.padding-0::before {
+    margin-right: 0; }
+
+/* Basic Checkbox styles */
+input[type=radio] + .lbl::before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-size: 11px;
+    color: #BBB5B0;
+    content: "\a0";
+    background-color: #FAFAFA;
+    border: 1px solid #CCC;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    /*height: 13px;*/
+    line-height: 13px;
+    min-width: 13px;
+    margin-right: 5px;
+    margin-top: -5px;
+    padding-right: 1px; }
+
+/* Checked state styles */
+input[type=radio]:checked + .lbl::before {
+    display: inline-block;
+    content: '\f00c';
+    background-color: #F5F8FC;
+    border-color: #009CDE;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1); }
+
+/* Hover state styles */
+input[type=radio]:hover + .lbl::before, input[type=radio] + .lbl:hover::before {
+    border-color: #1c7aad; }
+
+/* Shadow when checked or Active */
+input[type=radio]:active + .lbl::before, input[type=radio]:checked:active + .lbl::before {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1); }
+
+/* Disabled state styles */
+input[type=radio]:disabled + .lbl::before, input[type=radio][disabled] + .lbl::before, input[type=radio].disabled + .lbl::before {
+    background-color: #DDD !important;
+    border-color: #CCC !important;
+    box-shadow: none !important;
+    color: #BBB; }
+
+/* Styles for Radio button */
+input[type=radio] + .lbl::before {
+    border-radius: 12px;
+    border: 5px solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    width: 23px; }
+
+input[type=radio]:checked + .lbl::before {
+    content: "\2022";
+    color: #009CDE; }
+
+/**** End of customize Radio Button ****/
+.pre-report {
+    width: 80%;
+    font-weight: 700;
+    background-color: #404040;
+    color: #fbfbfb;
+    font-size: 14pt;
+    font-family: monospace; }
+
+/******* End of Customize Styles ********/
+/*********** Corporate Styles ***********/
+.mg-red {
+    background-color: #DA291C; }
+.mg-red:hover {
+    background-color: #ed786f; }
+.mg-red:focus {
+    background-color: #801810; }
+
+.mg-orange {
+    background-color: #FF671F; }
+.mg-orange:hover {
+    background-color: #ffac85; }
+.mg-orange:focus {
+    background-color: #b83b00; }
+
+.mg-blue {
+    background-color: #009cde; }
+.mg-blue:hover {
+    background-color: #45c8ff; }
+.mg-blue:focus {
+    background-color: #005478; }
+
+.mg-purple {
+    background-color: #753bbd; }
+.mg-purple:hover {
+    background-color: #aa85d9; }
+.mg-purple:focus {
+    background-color: #45236f; }
+
+.mg-lgrey {
+    background-color: #DFDDDB; }
+
+.mg-very-lgrey {
+    background-color: #F7F5F3; }
+
+.mg-white {
+    background-color: #FFFFFF; }
+
+.mg-green {
+    background-color: #009A44; }
+
+.mg-textboxbg-red {
+    background-color: #FAD6D3; }
+
+.mg-textboxbg-orange {
+    background-color: #FFB08A; }
+
+.mg-textboxbg-blue {
+    background-color: #93DEFF; }
+
+.mg-textboxbg-purple {
+    background-color: #CCA8DB; }
+
+.mg-text-color-dgrey {
+    color: #4D4540; }
+
+.mg-text-color-grey {
+    color: #80766E; }
+
+.mg-text-color-lgrey {
+    color: #A69F99; }
+
+.mg-text-color-red {
+    color: #DA291C; }
+
+.mg-text-color-green {
+    color: #009A44; }
+
+.mg-text-color-white {
+    color: #FFFFFF; }
+
+.mg-text-color-blue {
+    color: #009CDE; }
+
+.mg-font-size-14 {
+    font-size: 14px; }
+
+.mg-font-size-10 {
+    font-size: 10px; }
+
+.mg-gear {
+    color: #009CDE; }
+
+.mg-widget-btn {
+    text-align: left;
+    color: #fff;
+    width: 104%;
+    min-height: 120px; }
+
+.mg-widget-btn:hover {
+    color: #fff; }
+
+.mg-btn {
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+    font-size: 20px; }
+
+.mg-btn:hover {
+    color: #FFFFFF;
+    text-align: center;
+    border: none; }
+
+.mg-btn:focus {
+    color: #FFFFFF;
+    text-align: center;
+    border: none; }
+
+.mg-btn:active {
+    box-shadow: none;
+    outline: none; }
+
+.mg-btn-primary {
+    background-color: #009CDE; }
+
+.mg-btn-primary:hover {
+    background-color: #33B0E5;
+    border-bottom: none; }
+
+.mg-btn-primary:focus {
+    background-color: #007DB2;
+    outline: none;
+    border: 1px solid #007DB2;
+    border-top: none;
+    box-shadow: none; }
+
+.mg-btn-primary:active {
+    outline: none; }
+
+.mg-btn-secondary {
+    background-color: #80766E; }
+
+.mg-btn-secondary:hover {
+    background-color: #99918B; }
+
+.mg-btn-secondary:focus {
+    background-color: #665E58; }
+
+.mg-link {
+    color: #009CDE;
+    text-decoration: none; }
+
+.mg-link:hover {
+    text-decoration: underline; }
+
+.mg-transaction-summary {
+    position: fixed;
+    right: 10px; }
+
+.mg-divider {
+    height: 1px;
+    width: 100%;
+    display: block;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #DFDDDB; }
+
+.mg-icon-font-size {
+    font-size: 42px; }
+
+.mg-btn-default:active {
+    background-color: #FFFFFF;
+    border-color: transparent;
+    color: #009CDE; }
+
+.mg-jumbotron-margin {
+    margin-top: -2.1%;
+    margin-right: -3.25%;
+    margin-left: -3.25%; }
+
+.mg-sub-grey-bg-top-margin {
+    margin-top: -30px;
+    margin-right: -3.25%;
+    margin-left: -3.25%; }
+
+.mg-sub-grey-bg-bottom-margin {
+    margin-right: -3.25%;
+    margin-bottom: -30px;
+    margin-left: -3.25%; }
+
+.mg-jumbotron-bg {
+    background: url("/assets/images/Background01.png");
+    min-height: 351px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.container-fluid .mg-jumbotron-bg {
+    border-radius: 0; }
+
+/*********** End of Corporate Styles ************/
+/**** Override Bootstrap classes ****/
+small {
+    font-size: 75%; }
+
+.navbar {
+    background-color: #DFDDDB;
+    margin: 0 -15px;
+    /*removed container-fluid override and added this to prevent horizontal scroll bar*/ }
+
+.navbar-default-reset {
+    background-image: none;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    border-color: #dfdddb; }
+
+.navbar-no-margin-bottom {
+    margin-bottom: 0;
+    min-height: 0; }
+
+.navbar-brand-no-padding {
+    padding: 0; }
+
+.navbar-nav-margin-left-4pc {
+    margin-left: 4%; }
+
+.well {
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #80766E;
+    color: #80766E;
+    margin-left: 30px;
+    font-size: 14px;
+    line-height: 1.8; }
+
+.btn-default, .btn-default:hover, .btn-default:focus {
+    background-image: none; }
+
+.btn-default:active:hover {
+    color: #009CDE;
+    background-color: #FFFFFF;
+    border-color: #009CDE;
+    border-bottom: none;
+    border-right: none;
+    border-top: 1px solid #009CDE;
+    border-left: 1px solid #009CDE; }
+
+.btn-group > .btn, .btn-group-vertical > .btn {
+    float: none;
+    position: inherit; }
+
+.table {
+    background-color: #FFF; }
+
+.table-borders {
+    border: 1px solid #DFDDDB; }
+
+.table-row-borders {
+    border-bottom: 1px solid #DFDDDB; }
+
+.table-row-borders:last-child {
+    border-bottom: none; }
+
+.table-header-row {
+    background-color: transparent;
+    margin-bottom: auto; }
+
+.nav > li > a.main-menu-item {
+    padding: 10px 0; }
+
+.nav > li > a.main-menu-item:hover {
+    background-color: #FFFFFF; }
+
+.navbar-default .navbar-nav > li > a {
+    color: inherit; }
+
+.list-inline > li.padding-left-50 {
+    padding-left: 50px; }
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus {
+    outline: none;
+    outline-offset: 2px; }
+
+/**** End of Override Bootstrap classes ****/
+/**** Some classes that are use from bootstrap commonly that developers should not custom create
+
+// display: none;  Please use class="hidden"
+// float:right;  Please use class="pull-right"
+// float-left;  Please use class="pull-left"
+
+
+ ****/
+
+/*# sourceMappingURL=app.css.map */

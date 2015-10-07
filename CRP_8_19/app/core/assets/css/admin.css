@@ -1,0 +1,236 @@
+.align_column_company{
+    margin-top: -1px;
+    margin-left: -9px;
+}
+.align_columntitle_company{
+    left:-4%;
+    position:relative;
+    margin-top:49px;
+    margin-left:56px;
+    width: 162px;
+}
+.align_column_id{
+    /* margin-left:-10px; */
+    margin-left: 19px;
+}
+.align_columntitle_id{
+    /* margin-right: -51px; */
+    margin-left: 36px;
+}
+.align_search {
+    width: 20px;
+    height: 0px;
+    padding: 70px 0 0 10px;
+    left: 3%;
+    position: relative;
+}
+.search_style{
+    background-color: #009CDE;
+    border: transparent;
+    font-size: 16px;
+    width:121px;
+
+}
+.add_style{
+    background-color: #009CDE;
+    border: transparent;
+    font-size: 16px;
+    width: 33px;
+    height: 32px;
+    margin-left: 275px;
+    margin-top: -58px;
+
+}
+.box_makeup{
+    border: 2px solid lightgray;
+    font-size: 11px;
+    /* font-weight: 900; */
+    font-family: omnesregular,arial,sans-serif;
+    padding: 5px 5px 5px 12px;
+
+}
+
+.message_update{
+    position: relative;
+    /* bottom: 84%; */
+    width: 1235px;
+    margin-left: -15px;
+    text-align: center;
+}
+.del_style{
+    font-size: 16px;
+    width: 24px;
+    height: 21px;
+    padding: 0px 17px 3px 10px;
+    float:right;
+    background-color: #009CDE;
+    border: transparent;
+
+}
+.role_section{
+    position: relative;
+    left: 111%;
+    /* top: -235%; */
+    /* display: inline; */
+    bottom:345%;
+
+}
+.role_set{
+    left:16%;
+    position:relative;
+}
+.roleType_set{
+    left:20%;
+    position:relative;
+}
+
+label {
+    font-weight: normal !important;
+}
+
+.save_style{
+    background-color: #009CDE;
+    border: transparent;
+    font-size: 16px;
+    width:121px;
+
+}
+.align_searchtitle{
+    margin-left: 36px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    margin-top: 12px;
+
+}
+.role_align{
+    padding:5px;
+}
+.admin_box{
+    width: 1239px;
+    height: 468px;
+    border: 2px solid #DFDDDB;
+    background-color: #DFDDDB;
+}
+.align_panel{
+    width: 253px;
+    height: 258px;
+    margin-right: 94px;
+}
+.permissions_box{
+    /* display: inline-block; */
+    /* position: relative; */
+    width: 305px;
+    padding: 10px;
+    height: 119px;
+    position:relative;
+    left: 19%;
+    /* margin-left: 347px; */
+
+    font-size: 16px;
+    /* margin-top: 195px; */
+}
+
+.align_profileTitle{
+    font-size: 16px;
+    /* display: inline; */
+    position: relative;
+    left: 9%;
+}
+.align_panelbox{
+    position:relative;
+    width:173px;
+    height:70px;
+}
+.align_Rolestitle{
+    font-size: 16px;
+    width: 234px;
+    margin-top: -22px;
+    padding: 10px;
+
+    position: relative;
+    /* float: right; */
+    left: 18.5%;
+    height:37px;
+}
+.align_Location{
+    font-size: 16px;
+    width: 286px;
+    padding: 8px;
+
+    /* float: right; */
+    /* margin-top: -342px; */
+
+
+    /* margin-left: 11px; */
+    /* left: -35%; */
+    /* margin-right: 18px; */
+    position: relative;
+    left: 915px;
+    /* top: -183px; */
+
+    bottom: 307px;
+}
+.permissions_title{
+    font-size: 16px;
+    font-size: 16px;
+    position: relative;
+    left: 18%;
+    /* top: -25%; */
+    margin-top: 34px;
+
+}
+.permission_section{
+    position: relative;
+    left: 860px;
+    /* right: 23%; */
+    width: 309px;
+    /* left: 459px; */
+    bottom: 360px;
+}
+
+.align_save
+{
+    float: right;
+    position: relative;
+    right: 47%;
+    /* top: 4%; */
+    /* width: 20px; */
+    height: 0px;
+    padding: 10px 0 0 0;
+    top:22%;
+
+}
+.locations_box{
+    width: 303px;
+    height: 180px;
+    overflow-y: auto;
+    overflow-x: auto;
+
+}
+.align_userProfilePanel1{
+    width: 220px;
+    height: 242px;
+    padding: 10px;
+    margin-left: 237px;
+    margin-top: -89px;
+}
+.align_userProfilePanel2{
+    width: 212px;
+    height: 240px;
+    padding: 10px;
+    margin-left: 453px;
+    margin-top: -262px;
+}
+.align_userProfilePanel3{
+    width: 226px;
+    height:240px;
+    padding:10px;
+    margin-left: 663px;
+    margin-top: -260px;
+}
+.box_width{
+    width:114%;
+}
+
+
+

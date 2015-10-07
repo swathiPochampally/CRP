@@ -1,0 +1,41 @@
+{
+"data": {
+"auditDetails": {
+"auditEntitlementList": [
+{
+"date": null,
+"agentAcountNumber": "100003821",
+"agentName": "add",
+"agentLocation": "100003821",
+"userId": "addtest2",
+"userName": "add",
+"userLoginStatus": null,
+"userRoleType": "E",
+"userRoleDescription": "EV",
+"lastLoginAttempt": null,
+"lastSuccessfulLogin": null,
+"lastPasswordReset": null,
+"lastPermissionChangeDate": null
+},
+{
+"date": null,
+"agentAcountNumber": "100003821",
+"agentName": "add",
+"agentLocation": "100003821",
+"userId": "addtest2",
+"userName": "add",
+"userLoginStatus": null,
+"userRoleType": "E",
+"userRoleDescription": "EA",
+"lastLoginAttempt": null,
+"lastSuccessfulLogin": null,
+"lastPasswordReset": null,
+"lastPermissionChangeDate": null
+}
+],
+"auditUsageList": [
+
+]
+}
+}
+}

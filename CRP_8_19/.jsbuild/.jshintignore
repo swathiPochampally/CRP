@@ -1,0 +1,3 @@
+../scripts/core/_references.js
+../scripts/core/libraries/*.js
+../scripts/core/libraries/**/*.js

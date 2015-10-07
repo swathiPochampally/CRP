@@ -1,0 +1,191 @@
+<div>
+    <span class="page_title">Monitoring</span>
+    <div class="mon_box" >
+        <div class="mon_section">
+            <div class="mon_sub_section">
+                <div class="mon_item">HQ:
+                    <input type="text" ng-model="selectedHq" ng-disabled="disableHq" item-data="hqList"  typeahead="item as item.name for item in hqList | filter:$viewValue | limitTo:10" typeahead-no-results="noResults" class="form-control">
+                </div>
+                <!--<div class="mon_item">Divison:  <typeahead-directive item-data="divisionList1" select="selectedDivision1"></typeahead-directive></div>
+                <div class="mon_item">Divison:  <typeahead-directive item-data="divisionList2" select="selectedDivision2"></typeahead-directive></div>-->
+                <div class="mon_item mon_item_location">Location:
+                    <input type="text" ng-model="selectedLocation"  item-data="locationList"  typeahead="item as item.name for item in locationList | filter:$viewValue | limitTo:10" typeahead-no-results="noResults" class="form-control">
+                </div>
+            </div>
+            <div class="mon_sub_section">
+                <div class="mon_item">Transaction Views :
+                    <span dropdown on-toggle="toggled(open)">
+                          <button  type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled">
+                              {{selectedTemplate.templateName}} <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                              <li ng-repeat="choice1 in templateList">
+                                  <a href ng-click="selectedTemplateChoice(choice1)">{{choice1.templateName}}</a>
+                              </li>
+                          </ul>
+                    </span>
+                </div>
+                <div class="mon_item mon_item_produce" >Product Type:
+                    <span dropdown on-toggle="toggled(open)">
+                          <button  type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled">
+                              {{selectedProduct.name}} <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                              <li ng-repeat="choice in productList">
+                                  <a href ng-click="selectedProductChoice(choice)">{{choice.name}}</a>
+                              </li>
+                          </ul>
+                    </span>
+                </div>
+
+                <!--<div class="mon_item mon_item_transact">Transaction Type:
+                    <span dropdown on-toggle="toggled(open)">
+                          <button type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled">
+                              {{selectedTransaction.name}} <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                              <li ng-repeat="choice in transactionList">
+                                  <a href ng-click="selectedTransactionChoice(choice)">{{choice.name}}</a>
+                              </li>
+                          </ul>
+                    </span>
+                </div>-->
+
+            </div>
+            <div class="mon_sub_section">
+
+                <div class="mon_item" >DateRange : OR
+                     <span dropdown on-toggle="toggled(open)">
+                          <button  type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled">
+                              {{selectedDateRange.name}} <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                              <li ng-repeat="choice in dateRangeList">
+                                  <a href ng-click="selectedDateRangeChoice(choice)">{{choice.name}}</a>
+                              </li>
+                          </ul>
+                    </span>
+                </div>
+                <div class="mon_item_date">StartDate:
+                    <div>
+                        <p class="input-group">
+                            <input type="text" class="form-control col-md-3 ng-pristine ng-valid ng-valid date" datepicker-popup="{{datepickers.format}}" ng-model="datepickers.startDate" is-open="datepickers.dtStart" min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event,'dtStart')"><i class="glyphicon glyphicon-calendar"></i></button>
+                              </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="mon_item_date">EndDate:
+                    <div>
+                        <p class="input-group">
+                            <input type="text" class="form-control ng-pristine ng-valid ng-valid date" datepicker-popup="{{datepickers.format}}" ng-model="datepickers.endDate" is-open="datepickers.dtEnd" min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event,'dtEnd')"><i class="glyphicon glyphicon-calendar"></i></button>
+                              </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mon_separator mon_sub_section">Optional Filters
+
+                <input type="button" ng-class="initial_view" class="optional_icon" ng-click="isCollapsed= !isCollapsed; toggle_view()"/>
+
+                <span><hr style=" margin-top: 0px;margin-bottom: 0px"/></span>
+
+            </div>
+        </div>
+        <div class="mon_section" collapse="isCollapsed">
+            <div class="mon_sub_section">
+                <div class="mon_item">Face Amount Min <input class="form-control"  type="text" ng-model="faceMinAmount"></div>
+                <div class="mon_item">Face Amount Max <input class="form-control"  type="text" ng-model="faceMaxAmount"></div>
+                <div class="mon_item ">Send Country:
+                    <div class="crp-typahead container-fluid ">
+                        <input type="text" ng-model="selectedSendCountry" ng-disabled="disableSendCountry" typeahead="item as item.name for item in countryList | filter:$viewValue | limitTo:10" typeahead-no-results="noResults" class="form-control"/>
+                    </div>
+                </div>
+                <div class="mon_item "> Receive Country:
+                    <div class="crp-typahead container-fluid ">
+                        <input type="text" ng-model="selectedReceiveCountry" ng-disabled="disableReceiveCountry" typeahead="item as item.name for item in countryList | filter:$viewValue | limitTo:10" typeahead-no-results="noResults" class="form-control"/>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mon_sub_section">
+                <div class="mon_item">Photo ID Number <input class="form-control" ng-model="photoId" type="text"></div>
+                <div class="mon_item">Legal ID Number <input class="form-control" ng-model="legalId"  type="text"></div>
+                <div class="mon_item">Reference Number <input class="form-control" ng-model="referenceNumber" type="text" ng-disabled="disableReference"></div>
+            </div>
+            <div class="mon_sub_section">
+                <div class="mon_item">Last Name <input class="form-control" ng-model="lastName" type="text"></div>
+                <div class="mon_item">First Name <input class="form-control" ng-model="firstName" type="text"></div>
+                <div class="mon_item">Phone Number <input class="form-control" ng-model="phoneNumber" type="text"></div>
+            </div>
+
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary viewstyle" ng-click="viewTransactions()">View</button>
+        </div>
+    </div>
+    <div>
+        {{loadingMessage}}
+    </div>
+    <div class="alert-msg">
+        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+    <div ng-if="transData">
+
+        <div class="mon-results-control-bar">
+            <div style="height: 0px;padding-left: 5px" >
+                Patterns
+                <div class="mon-pattern" >
+                        <span dropdown on-toggle="toggled(open)">
+                              <button type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled">
+                                  {{selectedPattern.name}} <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                                  <li ng-repeat="choice in patternList">
+                                      <a href ng-click="selectedPatternChoice(choice)">{{choice.name}}</a>
+                                  </li>
+                              </ul>
+                        </span>
+                </div>
+                <div class="pattern-aggregate" ng-show="selectedPattern.code =='SEND-AGGREGATE' || selectedPattern.code =='RECEIVE-AGGREGATE'">
+                    <input class="form-control"  type="text" ng-model="aggregateMinAmount">
+                </div>
+                <!-- <span class="pdf_buttonAlign">
+                    <button type="button" class="btn crp=button glyphicon glyphicon-export" ng-click="exportPdf()">PDF&lt;!&ndash;<img src="app/core/assets/img/pdf_img.png" style="width:64px;height:37px;"/>&ndash;&gt;</button>
+                     </span>
+                     <span class="xls_buttonAlign">
+                    <button type="button" class="btn crp=button glyphicon glyphicon-export" ng-click="exportXls()">XLS&lt;!&ndash;<img src="app/core/assets/img/xls_img.jpg"style="width:46px;height:36px;"/>&ndash;&gt;</button>
+                 </span>-->
+               <!-- <span class="pdf_buttonAlign">
+                    <button type="button" class="btn crp=button" ng-click="exportPdf()"><img src="app/core/assets/img/pdf2.png" style="width:64px;height:34px;"/></button>
+                </span>-->
+             <!--   <span class="xls_buttonAlign">
+                    <button type="button" class="btn crp=button" ng-click="exportXls()"><img src="app/core/assets/img/xls_img.jpg"style="width:55px;height:32px;"/></button>
+                </span>-->
+
+            </div>
+            <div class="mon-results-control-bar-text"> <!--TRANSACTION RESULTS-->
+            </div>
+            <div class="mon-showhide">
+                <button type="button" class="btn btn-primary viewstyle templatestyle" ng-click="open('lg')">Show/Hide Columns</button>
+            </div>
+            <div class="xls_buttonAlign">
+                    <button type="button" class="btn crp=button" ng-click="exportXls()"><img src="app/core/assets/img/Xls_Img.PNG" style="width:25px;height:25px;"/></button>
+            </div>
+            <div class="mon-results-control-bar-search">
+                <input class="form-control"  type="text" placeholder="Search..." ng-model="search" ng-change="refreshData(search)">
+            </div>
+        </div>
+        <div class="mon-results">
+            <div ui-grid="gridOptions" class="mon-grid" ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination ui-grid-grouping></div>
+        </div>
+       <!-- <div>
+            <button type="button" class="btn btn-primary viewstyle templatestyle" ng-click="saveTemplate()">Save Template</button>
+        </div>-->
+    </div>
+
+</div>

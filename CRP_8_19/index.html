@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<!-- Declaring BaseController at the root causes all controllers initialized within the body to inherit from BaseController -->
+<html lang="en" ng-app="crpApp">
+<head>
+    <title>CRP Portal</title>
+    <!-- Not sure whether it is a good idea to have css in code directories.-->
+    <link href="app/core/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="app/core/assets/css/core.css" rel="stylesheet" />
+    <link href="app/core/assets/css/monitoring.css" rel="stylesheet" />
+    <link href="app/core/assets/css/login.css" rel="stylesheet" />
+    <link href="app/core/assets/css/admin.css" rel="stylesheet" />
+    <link href="app/core/assets/css/audit.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="app/core/assets/css/ui-grid.min.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="app/core/lib/jquery-1.11.3.min.js"></script>
+    <script src="app/core/lib/angular.min.js"></script>
+    <script src="app/core/lib/angular-route.js"></script>
+    <script src="app/core/lib/angular-animate.min.js"></script>
+
+    <script src="app/core/lib/ui-bootstrap-custom-tpls-0.13.3.min.js"></script>
+    <script src="app/core/lib/bootstrap.min.js"></script>
+    <script src="app/core/lib/ui-grid.min.js"></script>
+    <script src="app/core/lib/lodash.min.js"></script>
+    <script src="app/core/lib/vfsFont.js"></script>
+    <script src="app/core/lib/CSV.js"></script>
+    <script src="app/core/lib/alaSQL.js"></script>
+    <script src="app/core/lib/xlsx.core.min.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="app/core/shared/coreModule.js"></script>
+    <script type="text/javascript" src="app/core/shared/coreRoute.js"></script>
+    <script type="text/javascript" src="app/monitoring/monitoringModule.js"></script>
+    <script type="text/javascript" src="app/login/loginModule.js"></script>
+    <script type="text/javascript" src="app/monitoring/controllers/monitoringController.js"></script>
+    <script type="text/javascript" src="app/core/shared/directives/dropDownDirective.js"></script>
+    <script type="text/javascript" src="app/core/shared/directives/typeAheadDirective.js"></script>
+    <script type="text/javascript" src="app/core/shared/directives/datePickerDirective.js"></script>
+    <script type="text/javascript" src="app/monitoring/services/monitoringService.js"></script>
+    <script type="text/javascript" src="app/login/controllers/loginController.js"></script>
+    <script type="text/javascript" src="app/login/services/loginService.js"></script>
+    <script type="text/javascript" src="app/monitoring/controllers/showModalController.js"></script>
+    <script type="text/javascript" src="app/admin/controllers/adminController.js"></script>
+    <script type="text/javascript" src="app/admin/services/adminServices.js"></script>
+    <script type="text/javascript" src="app/audit/auditModule.js"></script>
+    <script type="text/javascript" src="app/audit/services/auditServices.js"></script>
+    <script type="text/javascript" src="app/audit/controllers/auditController.js"></script>
+    <script type="text/javascript" src="app/logout/services/logoutservice.js"></script>
+    <script type="text/javascript" src="app/logout/controller/logout.js"></script>
+
+</head>
+<body ng-controller="monitoringController">
+
+        <header style="border-bottom: 2px solid #DA291C;">
+            <div class="header_image ">
+
+                <img src="app/core/assets/img/money_gram.png">
+                <!--<img  style="top: -10px;position: relative;" src="app/core/assets/img/red_line.png">-->
+               <!-- <img style="  float: right;margin-right: 110px;" src="app/core/assets/img/Capture_Login.PNG">-->
+            </div>
+            <div class="hover-underline logout_style">
+               <!-- <div>
+                    Welcome  <strong>{{givenName}}</strong>
+                </div>
+                -->
+                <img style="height: 30px" src="app/core/assets/img/Capture_Login.PNG">
+               <!-- <i class="fa fa-unlock mg-link"> Logout</i>-->
+            </div>
+            <!--<div class="login-image">
+
+            </div>-->
+          <!--  <div class="wel_header">Welcome {{userName }} </div>
+            <span class="hover-underline mg-link logout_style"><i class="fa fa-unlock mg-link lock_logout"></i>
+                Logout
+            </span>-->
+        </header>
+        <div class="crp-navbar navbar navbar-default navbar-default-reset navbar-no-margin-bottom zero-radius">
+            <nav role="navigation">
+
+                <div class="col-xs-12 navbar-header margin-left-100 width-100pc collapse navbar-collapse" id="collapse">
+                    <ul class="nav navbar-nav navbar-nav-margin-left-4pc"><!-- ngRepeat: menuItem in menuItems -->
+                        <li class="cursor-pointer main-menu-item-padding ng-scope">
+                            <a href="#home" class="main-menu-item ng-binding">Home</a>
+                        </li><!-- end ngRepeat: menuItem in menuItems -->
+                        <li class="cursor-pointer main-menu-item-padding ng-scope">
+                            <a href="#monitoring" class="main-menu-item ng-binding">Monitoring</a>
+                        </li>
+                        <li class="cursor-pointer main-menu-item-padding ng-scope">
+                            <a href="#Administration" class="main-menu-item ng-binding">Administration</a>
+                        </li>
+                        </li>
+                        <li class="cursor-pointer main-menu-item-padding ng-scope">
+                            <a href="#Audit" class="main-menu-item ng-binding">Auditing</a>
+                        </li>
+                        <li class=" logoutbtn cursor-pointer main-menu-item-padding ng-scope">
+                            <a href="#logout" class="main-menu-item ng-binding">Logout</a>
+                        </li>
+                        <!-- end ngRepeat: menuItem in menuItems -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div ng-view class="page_view"></div>
+        <div class="row">
+            <div class="col-xs-12 padding-0">
+                <footer id="mgFooter" class="footer">
+                    <div class="text-right margin-top-32 margin-right-4pc" id="footer-content">
+                        <span class="ng-binding">Copyright © 2013-2015 MoneyGram All rights reserved.</span> &nbsp;&nbsp;
+                        <span class="footer-divider"></span> &nbsp;&nbsp;
+                        <span>Proprietary and confidential</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    <!--<script type="text/javascript" src="scripts/core/lib/require.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,90 @@
+ <div class="page_title">
+        Auditing
+ </div>
+ <div class="audit_box">
+     <div class="audit_sub_section">
+        <div class="audit_item">
+            <label class="audit_label">Report</label>
+            <span dropdown on-toggle="toggled(open)">
+            <button  type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled" ng-click="clearAll()">
+                {{selectedReport}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                <li ng-repeat="report in reportList">
+                    <a href ng-click="selectReport(report)">{{report.name}}</a>
+                </li>
+            </ul>
+            </span>
+        </div>
+
+        <div class="audit_item">
+            <label class="audit_label">RoleType</label>
+            <span dropdown on-toggle="toggled(open)">
+              <button  type="button" class="btn crp-button" dropdown-toggle ng-disabled="disabled" >
+                              {{selectedRole}} <span class="caret"></span>
+               </button>
+                <ul class="dropdown-menu crp-dropdown" aria-labelledby="single-button">
+                    <li ng-repeat="role in rolesList">
+                          <a href ng-click="selectRole(role)">{{role.name}}</a>
+                    </li>
+                 </ul>
+            </span>
+        </div>
+        <div class="audit_item_1">
+           <label class="audit_label">StartDate</label>
+            <div>
+                <p class="input-group">
+                  <input type="text" ng-keypress="datekey ($event)"class="form-control col-md-3 ng-pristine ng-valid ng-valid date" datepicker-popup="{{datepickers.format}}" ng-model="datepickers.startDate" is-open="datepickers.dtStart" min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                       <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event,'dtStart')"><i class="glyphicon glyphicon-calendar"></i></button>
+                       </span>
+                  </p>
+            </div>
+        </div>
+
+
+        <div class="audit_item_1">
+            <label class="audit_label">EndDate</label>
+        <div>
+            <p class="input-group">
+                <input type="text"  ng-keypress="datekey ($event)" class="form-control ng-pristine ng-valid ng-valid date" datepicker-popup="{{datepickers.format}}" ng-model="datepickers.endDate" is-open="datepickers.dtEnd" min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event,'dtEnd')"><i class="glyphicon glyphicon-calendar"></i></button>
+                              </span>
+            </p>
+        </div>
+        </div>
+     </div>
+     <div>
+         <span class="error_startdate" ng-show="validstartdate">Enter a valid Startdate</span>
+         <span class ="error_enddate" ng-show="validenddate">Enter a valid Enddate</span>
+
+
+
+     <div class="audit_sub_section">
+        <div class="audit_item">
+       <label class="audit_label">Location</label>
+            <input type="text" ng-model="selectedUpdateLocation" class="location_audit" item-data="locationList"  typeahead="item as item.name for item in locationList | filter:$viewValue:startsWith | limitTo:10" typeahead-no-results="noResults" class="form-control">
+            <button  class="btn btn-submit btn-primary add_style" value="+" ng-click="addLocation()">+</button>
+
+            <div class="panel panel-default locations_box" ng-model="collectLocation">
+                <!-- <input type="text" value="locationName" ng-model="selectedUpdateLocation"
+                        placeholder="list of selected locations...">-->
+                <div ng-repeat="selectedUpdateLocation in collectLocation track by $index">
+
+                    <!--<span ng-click="deleteLocation($index)">-->
+                    <div class="box_makeup">{{selectedUpdateLocation.name}} <button  class="btn btn-submit btn-primary del_style" ng-click="deleteLocation($index)">x</button></div>
+
+                    <!-- </span>-->
+                </div>
+
+            </div>
+        </div>
+     </div>
+        <input type="submit" class="btn btn-submit btn-primary save_style exportbtn" value="Export" ng-click="exporttoexcel()"/>
+
+         <span class="exportmsg" ng-show="exportmsg">Exporting data to excel...</span>
+
+
+</div>
+</div>
